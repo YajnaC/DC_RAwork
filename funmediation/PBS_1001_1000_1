@@ -1,0 +1,13 @@
+#!/bin/sh
+#PBS -l walltime=168:00:00
+#PBS -N tvem_test11_1
+#PBS -l nodes=1:ppn=1
+
+# Load R
+module load r/4.0.2
+
+# change to directory where 'qsub' was called
+cd funmediation
+
+# run my program
+Rscript ./CTRC_1001_1000_1.R > test11_1.out
